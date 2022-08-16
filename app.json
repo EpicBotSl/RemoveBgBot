@@ -42,6 +42,16 @@
       "required": true,
       "value": ""
     },
+    "UNSCREEN_API": {
+      "description": "Get this value from unscrene.com",
+      "required": false,
+      "value": "JuASCiT65NFrcdTcBJbF2z6x"
+    },
+    "REMOVEBG_API": {
+      "description": "Get this value from removebg.com/api",
+      "required": false,
+      "value": "8jgjzSPMVqWqKg45KvriAAv7"
+    },
     "API_HASH": {
       "description": "Get this value from my.telegram.org.",
       "required": true,
