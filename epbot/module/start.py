@@ -96,15 +96,13 @@ async def start(epic, message):
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
     await message.delete()
     await message.reply_photo("https://telegra.ph/file/27265e01c11225f2a0969.jpg", caption=f"""
-ʜᴇʟʟᴏ ||{}||
+ʜᴇʟʟᴏ ||{message.from_user.mention}||
 **🍁ɪ ᴀᴍ ᴍᴇᴅɪᴀ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʀᴇᴍᴏᴠᴇʀ ʙᴏᴛ**
 __ɪ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅꜱ..
 🍃 ᴠɪᴅᴇᴏ ᴀɴᴅ ᴘʜᴏᴛᴏꜱ__
-
 🍂 ᴄʟɪᴄᴋ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴇʟᴘ
 🍂 ᴄʟɪᴄᴋ ᴛᴏ ᴀʙᴏᴜᴛ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʙᴏᴛ
-
 ᴊᴜꜱᴛ ɴᴏᴡ ꜱᴇɴᴅ ᴍᴇ ᴘʜᴏᴛᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪ ᴡɪʟʟ ꜱᴇɴᴅ ᴘʜᴏᴛᴏ
-ᴡʜɪᴛʜᴏᴜᴛ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʙᴀʙʏ""" reply_markup="START_BUTTON")
+ᴡʜɪᴛʜᴏᴜᴛ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʙᴀʙʏ !""", reply_markup=START_BUTTON)
 
 
