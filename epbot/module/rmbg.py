@@ -6,6 +6,7 @@ from epbot import epic
 from epbot import *
 from config import *
 from pyrogram import *
+from asyncio import *
 from pyrogram.types import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -20,6 +21,7 @@ ERROR_BUTTONS = InlineKeyboardMarkup(
 )
 
 
+
 @epic.on_message(filters.private & (filters.photo | filters.video | filters.document))
 async def remove_background(bot, update):
     if not (REMOVEBG_API or UNSCREEN_API):
@@ -30,7 +32,6 @@ async def remove_background(bot, update):
             reply_markup=ERROR_BUTTONS
         )
         return
-    await update.reply_chat_action("typing")
     message = await update.reply_text(
         text="Processing",
         quote=True,
@@ -123,4 +124,4 @@ def removebg_video(file):
 #rmgbth
 
 #-----------------------------------------------------------------------#
-#------------------------------------------------------------------------#ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ <s/ʟ>#
+#------------------------------uu------------------------------------------#ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ <s/ʟ>#
