@@ -1,0 +1,2 @@
+# RemoveBgBot
+Made with pyrogram
