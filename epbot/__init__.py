@@ -27,6 +27,8 @@ except KeyError:
 
 #&-----&----&-----&---&------------&----------
 
+AUTH_CHATS = "EpicDevelopers"
+
 try:
     ARQ_API_KEY = "JRBVAR-JICHKN-DFLDNX-NPRGCH-ARQ"
     ARQ_API_URL = "https://arq.hamker.in"
