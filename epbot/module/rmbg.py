@@ -81,7 +81,6 @@ async def remove_background(bot, update):
     try:
         with open(new_file_name, "wb") as file:
             file.write(new_document.content)
-        await update.reply_chat_action("upload_document")
     except Exception as error:
         await message.edit_text(
            text=error,
