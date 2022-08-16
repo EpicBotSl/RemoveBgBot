@@ -62,7 +62,7 @@ class epic(Client):
             mkdir('/tmp/thumbnails/')
         for chat in AUTH_CHATS:
             await self.send_photo(chat,"https://telegra.ph/file/97bc8a091ac1b119b72e4.jpg","**Spotify Downloa Started**")
-        LOGGER.info(f"Bot Started As @EpSongbot\n")
+        LOGGER.info(f"Bot Started As @RemBackBot\n")
     
     async def stop(self,*args):
         await super().stop()
