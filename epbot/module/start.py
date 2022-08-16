@@ -34,7 +34,6 @@ from database.db import Database
 from asyncio import *
 import heroku3
 import requests
-from script import *
 from database.check_user import *
 
 
