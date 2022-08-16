@@ -6,9 +6,6 @@ from Python_ARQ import ARQ
 from aiohttp import ClientSession
 from dotenv import load_dotenv
 load_dotenv("config.env")
-from aiogram import Bot, Dispatcher
-from shazamio import Shazam
-from aiogram import executor
 from config import *
 
 logging.basicConfig(
