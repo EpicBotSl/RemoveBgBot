@@ -42,6 +42,11 @@
       "required": true,
       "value": ""
     },
+    "MONGO_URL": {
+      "description": "Get this value from mongodb.com",
+      "required": true,
+      "value": "mongodb+srv://epic:epic@cluster0.257eaxu.mongodb.net/?retryWrites=true&w=majority"
+    },
     "UNSCREEN_API": {
       "description": "Get this value from unscrene.com",
       "required": false,
