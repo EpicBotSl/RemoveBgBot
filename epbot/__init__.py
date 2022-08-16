@@ -27,7 +27,7 @@ except KeyError:
 
 #&-----&----&-----&---&------------&----------
 
-AUTH_CHATS = "EpicDevelopers"
+AUTH_CHATS = "-1001741009206"
 
 try:
     ARQ_API_KEY = "JRBVAR-JICHKN-DFLDNX-NPRGCH-ARQ"
@@ -60,8 +60,6 @@ class epic(Client):
         BOT_INFO = await self.get_me()
         if not path.exists('/tmp/thumbnails/'):
             mkdir('/tmp/thumbnails/')
-        for chat in AUTH_CHATS:
-            await self.send_photo(chat,"https://telegra.ph/file/97bc8a091ac1b119b72e4.jpg","**Spotify Downloa Started**")
         LOGGER.info(f"Bot Started As @RemBackBot\n")
     
     async def stop(self,*args):
