@@ -63,6 +63,41 @@ DATABASE_URL=MONGO_URL
 db = Database(DATABASE_URL, "rmbgbot")
 
 
+
+
+M_back = InlineKeyboardMarkup([[
+                 InlineKeyboardButton('⏎', callback_data="mback")
+                 ]])
+
+HELP_TEXT = """--**More Help**--
+
+- Just send me a photo or video
+- I will download it
+- I will send the photo or video without background
+Made by @EpicBotsSl 🍁"""
+
+
+ABOUT_TXT = f"""
+👀ᴅᴇᴠᴇʟᴏᴘᴇʀ : [𝔫𝔞𝔳𝔞𝔫𝔧𝔞𝔫𝔞](https://t.me/NA_VA_N_JA_NA1)
+🔥ᴄʜᴀɴɴᴇʟ : [ᴇᴘɪᴄ ᴅᴇᴠᴇꜱ](https://t.me/EpicBotsSl)
+🔰ᴘᴏᴡᴇʀᴅ ʙʏ : [ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ](https://t.me/EpicBotsSl)
+⚡ʙᴀꜱᴇᴅ ᴏɴ : [ᴘʏʀᴏɢʀᴀᴍ](https://pyrogram.org)
+🚦ᴍᴀᴅᴇ ᴡɪᴛʜ : [ᴘʏᴛʜᴏɴ](https://python.org)
+
+      [ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ 🇱🇰](https://t.me/EpicBotsSl)
+"""
+
+START = f"""
+ʜᴇʟʟᴏ ||{}||
+**🍁ɪ ᴀᴍ ᴍᴇᴅɪᴀ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʀᴇᴍᴏᴠᴇʀ ʙᴏᴛ**
+__ɪ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅꜱ..
+🍃 ᴠɪᴅᴇᴏ ᴀɴᴅ ᴘʜᴏᴛᴏꜱ__
+🍂 ᴄʟɪᴄᴋ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴇʟᴘ
+🍂 ᴄʟɪᴄᴋ ᴛᴏ ᴀʙᴏᴜᴛ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʙᴏᴛ
+ᴊᴜꜱᴛ ɴᴏᴡ ꜱᴇɴᴅ ᴍᴇ ᴘʜᴏᴛᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪ ᴡɪʟʟ ꜱᴇɴᴅ ᴘʜᴏᴛᴏ
+ᴡʜɪᴛʜᴏᴜᴛ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʙᴀʙʏ !"""
+
+
 START_BUTTON = InlineKeyboardMarkup(
     [
         [
@@ -105,3 +140,36 @@ __ɪ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅꜱ..
 ᴡʜɪᴛʜᴏᴜᴛ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ʙᴀʙʏ !""", reply_markup=START_BUTTON)
 
 
+@bot.on_callback_query()  
+async def tgm(bot, update):  
+    if update.data == "add": 
+        await update.answer(
+             text="♻️Adding Soon.....",
+        )
+    elif update.data == "help":
+         await update.message.edit_text(
+             text=HELP_TEXT,
+             reply_markup=M_back,
+             disable_web_page_preview=True
+         )
+         await update.answer(
+             text="🕊️ Welcome to Help menu 🕊️ Join @EpicBotsSl",
+         )
+    elif update.data == "mback":
+         await update.message.edit_text(
+             text=START,
+             reply_markup=START_BUTTON,
+             disable_web_page_preview=True
+         )
+         await update.answer(
+             text="🕊️ Welcome back 🕊️ Join @EpicBotsSl",
+         )
+    elif update.data == "about":
+         await update.message.edit_text(
+             text=ABOUT_TXT,
+             reply_markup=M_back,
+             disable_web_page_preview=True
+         )
+         await update.answer(
+             text="🕊️ Welcome to about menu 🕊️ Join @EpicBotsSl",
+         )
