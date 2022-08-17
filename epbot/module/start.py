@@ -123,7 +123,7 @@ async def start(epic, message):
     if not await db.is_user_exist(chat_id):
         await db.add_user(chat_id)
         if -1001741009206:
-            await apic.send_message(
+            await epic.send_message(
                 -1001741009206,
                 f"#NEWUSER: \n\n**User:** [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n\**ID:**{message.from_user.id}\n Started @RemBackBot !!",
             )
