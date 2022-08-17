@@ -23,6 +23,7 @@ import psutil
 import asyncio
 import wget
 import motor.motor_asyncio
+from epbot.module.rmbg import *
 import pymongo
 import aiofiles
 import datetime
@@ -173,3 +174,14 @@ async def tgm(bot, update):
          await update.answer(
              text="🕊️ Welcome to about menu 🕊️ Join @EpicBotsSl",
          )
+    elif update.data == "hp":
+         await update.message.edit_text(
+             text=HELP_TEXT,
+             reply_markup=M_back,
+             disable_web_page_preview=True
+         )
+         await update.answer(
+             text="🕊️ Welcome to Help menu 🕊️ Join @EpicBotsSl",
+         )
+    elif update.data == "close":
+         await update.message.delete()
