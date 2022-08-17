@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 ERROR_BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton('Help', callback_data='help'),
+            InlineKeyboardButton('Help', callback_data='hp'),
             InlineKeyboardButton('Close', callback_data='close')
         ]
     ]
