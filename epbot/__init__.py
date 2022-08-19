@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 load_dotenv("config.env")
 from config import *
 
+
+from telethon import TelegramClient
+
 logging.basicConfig(
     level=logging.DEBUG, format="%(asctime)s - %(message)s",
     handlers = [logging.FileHandler('bot.log'), logging.StreamHandler()]
@@ -65,3 +68,21 @@ class epic(Client):
     async def stop(self,*args):
         await super().stop()
         LOGGER.info("Bot Stopped, Bye.")
+
+
+#################################################
+   ##.  #
+   # #. #
+   #. # #
+   #.  ##
+##########
+
+TOKEN = ("BOT_TOKEN", required=True)
+NAME = TOKEN.split(":")[0]
+
+tbot = TelegramClient(
+    NAME, get_int_key("APP_ID", required=True), get_str_key("APP_HASH", required=True)
+)
+
+# Telethon
+tbot.start(bot_token=TOKEN)
