@@ -77,12 +77,5 @@ class epic(Client):
    #.  ##
 ##########
 
-TOKEN = "BOT_TOKEN"
-NAME = TOKEN.split(":")[0]
 
-tbot = TelegramClient(
-    NAME, "APP_ID", "APP_HASH"
-)
-
-# Telethon
-tbot.start(bot_token=TOKEN)
+tbot = TelegramClient('epicbots', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
