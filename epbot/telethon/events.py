@@ -4,7 +4,7 @@ from pathlib import Path
 
 from telethon import events
 
-from epbot.telethon.telethon import tbot
+from epbot import tbot
 
 CMD_LIST = {}
 
