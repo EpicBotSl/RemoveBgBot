@@ -21,10 +21,28 @@ ERROR_BUTTONS = InlineKeyboardMarkup(
 )
 
 
+def removebg_image(file):
+    return requests.post(
+        "https://api.remove.bg/v1.0/removebg",
+        files={"image_file": open(file, "rb")},
+        data={"size": "auto"},
+        headers={"X-Api-Key": REMOVEBG_API}
+    )
 
+
+def removebg_video(file):
+    return requests.post(
+        "https://api.unscreen.com/v1.0/videos",
+        files={"video_file": open(file, "rb")},
+        headers={"X-Api-Key": UNSCREEN_API}
+    )
+
+
+#-----------------------------------------------------------------------#
+#------------------------------uu------------------------------------------#ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ <s/ʟ>#
 @epic.on_message(filters.private & (filters.photo | filters.video | filters.document))
-async def remove_background(bot, update):
-    if not (REMOVEBG_API or UNSCREEN_API):
+async def remove_background(epic, update):
+    if not (REMOVEBG_API):
         await update.reply_text(
             text="Error :- API not found",
             quote=True,
@@ -104,23 +122,3 @@ async def remove_background(bot, update):
         )
 
 
-def removebg_image(file):
-    return requests.post(
-        "https://api.remove.bg/v1.0/removebg",
-        files={"image_file": open(file, "rb")},
-        data={"size": "auto"},
-        headers={"X-Api-Key": REMOVEBG_API}
-    )
-
-
-def removebg_video(file):
-    return requests.post(
-        "https://api.unscreen.com/v1.0/videos",
-        files={"video_file": open(file, "rb")},
-        headers={"X-Api-Key": UNSCREEN_API}
-    )
-
-#rmgbth
-
-#-----------------------------------------------------------------------#
-#------------------------------uu------------------------------------------#ᴇᴘɪᴄ ᴅᴇᴠᴇʟᴏᴘᴇʀꜱ <s/ʟ>#
