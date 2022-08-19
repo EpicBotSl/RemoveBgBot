@@ -10,7 +10,7 @@ from config import *
 from epbot.telethons.events import register
 from epbot import tbot
 
-REM_BG_API_KEY = ("REMOVEBG_API", required=False)
+REM_BG_API_KEY = "REMOVEBG_API"
 TEMP_DOWNLOAD_DIRECTORY = "./"
 
 
