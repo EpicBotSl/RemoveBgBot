@@ -27,7 +27,7 @@ async def is_register_admin(chat, user):
 
 
 @register(pattern="^/rmbg")
-async def _(event):
+async def rembgs(event):
     HELP_STR = "use `/rmbg` as reply to a media"
     if event.fwd_from:
         return
