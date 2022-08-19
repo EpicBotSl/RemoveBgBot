@@ -77,7 +77,7 @@ class epic(Client):
    #.  ##
 ##########
 
-TOKEN = ("BOT_TOKEN", required=True)
+TOKEN = "BOT_TOKEN"
 NAME = TOKEN.split(":")[0]
 
 tbot = TelegramClient(
